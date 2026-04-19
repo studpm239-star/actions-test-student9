@@ -1,0 +1,22 @@
+name: Simple CI Test
+
+on:
+  push:
+    branches:
+      - main
+      - actions_test_student9
+  pull_request:
+    branches:
+      - main
+      - actions_test_student9
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Test message
+        run: echo "GitHub Actions for student 9 works successfully"
